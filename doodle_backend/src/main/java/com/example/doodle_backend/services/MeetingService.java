@@ -18,7 +18,7 @@ public class MeetingService {
         return meeting;
     }
 
-    public Meeting previewMeeting (long id){
-        return meetingRepository.previewMeeting(id);
-    }
+//    public Meeting previewMeeting (long id){
+//        return meetingRepository.previewMeeting(id);
+//    }
 }

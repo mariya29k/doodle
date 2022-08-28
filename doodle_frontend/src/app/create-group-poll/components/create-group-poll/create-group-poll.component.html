@@ -1,0 +1,20 @@
+<div class="container" id="container">
+  <div class="form-container sign-in-container">
+    <form action="#">
+      <h1>Create Group Poll</h1>
+      <label for="title">Title</label>
+      <input type="text" id="title" placeholder="What's the occasion" required/>
+      <label for="description">Description (optional)</label>
+      <textarea id="description" name="description" rows="4" cols="50" placeholder="Description"></textarea>
+      <label for="date">Choose a date</label>
+      <input type="date" id="date" name="date" required>
+      <label for="time">Choose a time</label>
+      <input type="time" id="time" name="time" min="08:00" max="19:00" required>
+      <small>Office hours are from 08:00 to 19:00</small>
+      <br>
+      <button type=button>Add more slots</button>
+      <br>
+      <button type=button id="button2">Create poll and continue</button>
+    </form>
+  </div>
+</div>
