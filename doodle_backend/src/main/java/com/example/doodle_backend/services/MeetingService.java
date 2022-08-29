@@ -16,7 +16,7 @@ public class MeetingService {
         return meeting;
     }
 
-//    public Meeting previewMeeting(int id) {
-//        return meetingRepository.getMeetingById(id);
-//    }
+    public Meeting getMeetingById(int id) {
+        return meetingRepository.findByMeetingId(id);
+    }
 }

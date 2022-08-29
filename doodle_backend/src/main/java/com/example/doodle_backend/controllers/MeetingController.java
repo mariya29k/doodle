@@ -3,6 +3,7 @@ package com.example.doodle_backend.controllers;
 import com.example.doodle_backend.entities.Meeting;
 import com.example.doodle_backend.services.MeetingService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +13,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/meeting")
 public class MeetingController {
 
-    private final MeetingService meetingService;
+    @Autowired
+    private  MeetingService meetingService;
 
     @PostMapping()
     @CrossOrigin
@@ -20,10 +22,10 @@ public class MeetingController {
         return new ResponseEntity<>(meetingService.persistMeeting(meeting), HttpStatus.OK);
     }
 
-//    @GetMapping("/{meetingId}")
-//    @CrossOrigin
-//    public ResponseEntity<Meeting> previewMeeting(@PathVariable int meetingId)  {
-//        return new ResponseEntity<>(meetingService.previewMeeting(meetingId), HttpStatus.OK);
-//    }
+    @GetMapping("/{meetingId}")
+    @CrossOrigin
+    public ResponseEntity<Meeting> getMeetingById(@PathVariable("meetingId") int meetingId)  {
+        return new ResponseEntity<>(meetingService.getMeetingById(meetingId), HttpStatus.OK);
+    }
 
 }
