@@ -13,7 +13,7 @@ import java.util.List;
 public class Meeting {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long meetingId;
+    private int meetingId;
 
     @Column(nullable = false)
     private LocalDateTime dateFrom;
@@ -21,9 +21,13 @@ public class Meeting {
     @Column(nullable = false)
     private LocalDateTime dateTo;
 
+    @Column(nullable = false)
+    private String title;
+
+    @Column()
+    private String description;
+
     @OneToMany(mappedBy = "meeting", fetch = FetchType.EAGER)
     private List<MeetingUserSlot> users = new ArrayList<>();
-
-
 
 }

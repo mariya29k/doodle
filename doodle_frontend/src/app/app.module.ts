@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import {CreateGroupPollComponent} from "./create-group-poll/components/create-group-poll/create-group-poll.component";
 import {CreateGroupPollModule} from "./create-group-poll/create-group-poll.module";
+import {ApiHttpService} from "./config/api-http.service";
+import {ApiEndpointsService} from "./core/services/api-endpoints.service";
 
 @NgModule({
   declarations: [
@@ -11,9 +13,10 @@ import {CreateGroupPollModule} from "./create-group-poll/create-group-poll.modul
   ],
   imports: [
     BrowserModule,
-    CreateGroupPollModule
+    CreateGroupPollModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

@@ -37,7 +37,6 @@ textarea {
 }
 
 button {
-  border-radius: 20px;
   background-color: #026440;
   color: #FFFFFF;
   font-size: 12px;
@@ -47,10 +46,6 @@ button {
   text-transform: uppercase;
   transition: transform 80ms ease-in;
   border-radius: 50px;
-}
-
-button2 {
-  color: #037d50;
 }
 
 button:active {

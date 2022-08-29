@@ -7,7 +7,6 @@ import javax.persistence.Embeddable;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-@SuppressWarnings({})
 @Data
 @Embeddable
 public class MeetingUserKey implements Serializable { //for primary key purposes

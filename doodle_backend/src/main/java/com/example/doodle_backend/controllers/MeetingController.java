@@ -22,7 +22,7 @@ public class MeetingController {
 
 //    @GetMapping("/{meetingId}")
 //    @CrossOrigin
-//    public ResponseEntity<Meeting> previewMeeting(@PathVariable long meetingId)  {
+//    public ResponseEntity<Meeting> previewMeeting(@PathVariable int meetingId)  {
 //        return new ResponseEntity<>(meetingService.previewMeeting(meetingId), HttpStatus.OK);
 //    }
 
