@@ -14,6 +14,7 @@ public class DataSourceConfig {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.ibm.db2.jcc.DB2Driver");
         dataSource.setUrl("jdbc:db2://62.44.108.24:50000/SAMPLE");
+        dataSource.setSchema("FN71996");
         dataSource.setUsername("db2admin");
         dataSource.setPassword("db2admin");
 

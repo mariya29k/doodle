@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface MeetingRepository extends JpaRepository<Meeting, Integer> {
 
     Meeting findByMeetingId(int id);
+
 }

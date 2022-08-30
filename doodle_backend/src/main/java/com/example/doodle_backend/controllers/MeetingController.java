@@ -13,8 +13,12 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/meeting")
 public class MeetingController {
 
+    private MeetingService meetingService;
+
     @Autowired
-    private  MeetingService meetingService;
+    public MeetingController(MeetingService meetingService) {
+        this.meetingService = meetingService;
+    }
 
     @PostMapping()
     @CrossOrigin

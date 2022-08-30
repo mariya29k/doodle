@@ -3,18 +3,27 @@
     <form action="#">
       <h1>Create Group Poll</h1>
       <label for="title">Title</label>
-      <input type="text" id="title" placeholder="What's the occasion" required/>
+      <input [(ngModel)]="title" [ngModelOptions]="{standalone: true}" type="text" id="title" placeholder="What's the occasion" required/>
       <label for="description">Description (optional)</label>
-      <textarea id="description" name="description" rows="4" cols="50" placeholder="Description"></textarea>
+      <textarea [(ngModel)]="description" id="description" name="description" rows="4" cols="50" placeholder="Description"></textarea>
       <label for="date">Choose a date</label>
-      <input type="date" id="date" name="date" required>
+      <form>
+      <input [(ngModel)]="date" type="date" id="date" name="date" required>
       <label for="time">Choose a time</label>
-      <input type="time" id="time" name="time" min="08:00" max="19:00" required>
+      <input [(ngModel)]="time" type="time" id="time" name="time" min="08:00" max="19:00" required>
       <small>Office hours are from 08:00 to 19:00</small>
       <br>
-      <button type="button">Add more slots</button>
-      <br>
-      <button type="button">Create poll and continue</button>
+      <button type="button" style="align-self: center; padding: 10px;" (click)="addNewTime($event)">Add slot</button>
+      </form>
+
+      <div>
+        <div *ngFor="let time of times" class="time">
+          <p>{{time.toUTCString()}}</p>
+        </div>
+      </div>
+
+      <button type="button" (click)="submit($event)">Create poll and continue</button>
+    <br>
     </form>
   </div>
 </div>
